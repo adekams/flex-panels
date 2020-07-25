@@ -3,6 +3,7 @@ html{
     font-weight: 400;
     box-sizing: border-box;
     font-family: fantasy;
+    background: green;
 }
 body{
     margin: 0;
@@ -19,14 +20,11 @@ body{
 }
 .panel{
     display: flex;
-    /* width: 20%; */
     justify-content: center;
     align-items: center;
     flex: 1;
     flex-direction: column;
-    background: rgb(177, 42, 177);
     background-size: cover;
-    /* width: 20%; */
     box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
     transition:
         font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
@@ -45,16 +43,54 @@ body{
 }
 
 .panel p{
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Sedgwick Ave', cursive;
     font-size: 2rem;
     text-transform: uppercase;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
 }
 .panel p:nth-child(2){
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .panel.open{
     flex: 5;
-    font-size: 40px;
+    font-size: 30px;
+}
+
+.panel > *:first-child { transform: translateY(-100%); }
+
+.panel.open-active > *:first-child { transform: translateY(0); }
+
+.panel > *:last-child { transform: translateY(100%); }
+
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+#panel1{
+    background: url('https://images.unsplash.com/photo-1595601516735-107d855da89d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') center no-repeat;
+    background-size: cover;
+}
+#panel2{
+    background: url('https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') center no-repeat;
+    background-size: cover;
+}
+#panel3{
+    background: url('https://res.cloudinary.com/adenike/image/upload/v1580320773/Beautiful-Stars_txvt4x.jpg') center no-repeat;
+    background-size: cover;
+}
+#panel4{
+    background: url("https://res.cloudinary.com/adenike/image/upload/v1580320773/spilled-moon_mg5uhm.png") center no-repeat;
+    background-size: cover;
+}
+#panel5{
+    background: url('https://images.unsplash.com/photo-1531986733711-de47444e8cd8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60') center no-repeat;
+    background-size: cover;
+}
+
+@media(min-width: 1200px){
+    .panel p:nth-child(2) {
+        font-size: 4em;
+    }
+    .panel.open {
+        font-size: 40px;
+    }
 }

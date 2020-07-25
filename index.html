@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
     <title>Flex Panels | JS30</title>
 </head>
 <body>
@@ -42,14 +42,14 @@
         const panel = document.querySelectorAll(".panel");
 
         function toggleOpen() {
-            console.log("Hello");
-            this.classlist.toggle("open");
+            //console.log("Hello");
+            this.classList.toggle("open");
         }
 
         function toggleActive(e) {
-            console.log(e.propertyName);
+            //console.log(e.propertyName);
             if (e.propertyName.includes('flex')) {
-                this.classlist.toggle("open-active");
+                this.classList.toggle("open-active");
             }
         }
 
